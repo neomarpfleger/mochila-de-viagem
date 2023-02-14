@@ -1,5 +1,6 @@
 
-const form = document.getElementById("novoItem");
+
+/*const form = document.getElementById("novoItem");
 const lista = document.getElementById("lista");
 const itens = JSON.parse(localStorage.getItem("itens")) || []
 
@@ -40,18 +41,15 @@ function criaElemento(item){
 
     lista.appendChild(novoItem);
 
-}
+}*/
 
 
-
-
-
-
-/*const form=document.getElementById("novoItem");
+const form=document.getElementById("novoItem");
 
 form.addEventListener("submit", (evento)=>{
     evento.preventDefault();
     criaElemento(evento.target.elements["nome"].value, evento.target.elements["quantidade"].value);
+    console.log(nome)
 })
 
 function criaElemento(nome, quantidade){
@@ -66,4 +64,4 @@ function criaElemento(nome, quantidade){
     
     const lista = document.getElementById("lista")
     lista.appendChild(novoItem)
-}*/
+}
