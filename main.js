@@ -23,7 +23,7 @@ form.addEventListener("submit", (evento)=>{
 
     if(existe){
         itemAtual.id = existe.id
-        console.log(existe.id)
+        atualizaElemento(itemAtual)
     } else{
         itemAtual.id = itens.length
 
@@ -32,7 +32,6 @@ form.addEventListener("submit", (evento)=>{
         itens.push(itemAtual);
     }
 
-    
     localStorage.setItem("itens", JSON.stringify(itens))
 
     nome.value = ""
@@ -50,5 +49,8 @@ function criaElemento(item){
     novoItem.innerHTML += item.nome;
 
     lista.appendChild(novoItem);
+}
 
+function atualizaElemento(item){
+    document.querySelector("[data-id='"+item.id+"']").innerHTML = item.quantidade
 }
